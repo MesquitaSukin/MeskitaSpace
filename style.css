@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&family=Monsieur+La+Doulaise&family=WDXL+Lubrifont+JP+N&display=swap');
+/* Fonts
+  --- WDXL Lubrifont JP N
+  --- Monsieur La Doulaise
+  --- Google Sans Flex
+*/
+
+:root {
+  --branco: #ECEAFF;
+  --verde: #AFE27B;
+  --rosa: #db77b3;
+  --roxo: #220649;
+}
+
+#styleF {
+  font-family: 'Monsieur La Doulaise', sans-serif;
+  font-size: 90px;
+  font-weight: 300;
+}
+h1 {
+  font-family: 'Google Sans Flex', sans-serif;
+  font-size: 50px;
+  font-weight: 400;
+}
+p {
+  font-family: 'Google Sans Flex', sans-serif;
+  font-size: 25px;
+  font-weight: 400;
+}
+
+body{
+  background-color: var(--branco);
+}
+
+/* LOGO MESKITA */
+.logo{
+  position: absolute;
+  display: flex;
+  top: 10%;
+  left: 40%;
+  gap: 2px;
+  z-index: 1;
+  aspect-ratio: 1;
+}
+.logo span {
+  font-family: 'WDXL Lubrifont JP N', sans-serif;
+  font-size: 800%;
+  font-weight: 400;
+  color: var(--roxo);
+  position: relative;
+  display: inline-block;
+}
+#k {color: var(--verde);}
+.logo span:nth-child(1) { transform: translateY(40px) rotate(-5deg);}
+.logo span:nth-child(2) { transform: translateY(0px) translateX(-20px) rotate(5deg);}
+.logo span:nth-child(3) { transform: translateY(50px) translateX(-30px) rotate(5deg);}
+.logo span:nth-child(4) { transform: translateY(30px) translateX(-10px) rotate(-7deg);}
+.logo span:nth-child(5) { transform: translateY(50px) translateX(-20px) rotate(5deg);}
+.logo span:nth-child(6) { transform: translateY(40px) rotate(-5deg);}
+.logo span:nth-child(7) { transform: translateY(50px) translateX(-10px) rotate(5deg);}
+
+
+
+.person {
+  width: 100%;
+  height: auto;
+  display: block;
+  position: relative;
+  border-bottom: 1px solid #000;
+  z-index: 0; /* ← na frente */
+}
+
+.eye-img {
+  width: 80%;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.08s ease-out; /* movimento suave */
+}
+
+.scene {
+  position: relative;
+  height: auto;
+  width: 75%;  /* ou o tamanho que quiser */
+  background-image: url('img/win\ xp\ 3.jpg');
+  background-size: cover;
+  margin: 0 auto;
+}
+
+.eye-wrapper {
+  position: absolute;
+  width: 7%;   /* tamanho do olho em % da div */
+  height: auto;
+  pointer-events: none;
+  aspect-ratio: 1;
+}
+
+#eye-left  { top: 38%; left: 42.9%; }
+#eye-right { top: 38.3%; left: 53.4%; }
+
+/* HI AM _ DIGITADO */
+.texto-animado {
+  font-size: 2rem;
+  font-family: 'Courier New', Courier, monospace;
+  display: inline-block;
+}
+
+/* text */
+.text{
+  padding: 20px;
+  font-size: 1.5rem;
+  width: 50%;
+  margin: 0 auto;
+}
+
+/* Efeito do cursor piscando */
+.cursor {
+  display: inline-block;
+  animation: piscar 0.7s step-start infinite;
+}
+
+@keyframes piscar {
+  50% { opacity: 0; }
+}
+
+/* ── ícones de desktop ── */
+.desktop-icon {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 72px;
+  text-decoration: none;
+  padding: 4px;
+  border-radius: 4px;
+  z-index: 1;
+}
+
+.desktop-icon img {
+  width: 60%;
+  height: 60%;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+.desktop-icon span {
+  font-family: 'Google Sans Flex', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--rosa);
+  text-align: center;
+  margin-top: 3px;
+  word-break: break-word;
+  pointer-events: none;
+}
+
+.desktop-icon:hover {
+  background: rgba(70, 200, 0, 0.22);
+  outline: 1px solid black;
+}
